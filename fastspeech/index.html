@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.55.5" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/skeleton.css">
+<link rel="stylesheet" href="../css/custom.css">
+<link rel="alternate" href="index.xml" type="application/rss+xml" title="Almost Unsupervised Text to Speech and Automatic Speech Recognition">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+<title>Audio Sample from &#34;FastSpeech: Fast, Robust and Controllable Text to Speech&#34; - Almost Unsupervised Text to Speech and Automatic Speech Recognition</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		
+			
+		
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="https://schema.org/BlogPosting">
+            <h1 class="entry-title" itemprop="headline">Audio Sample from &#34;FastSpeech: Fast, Robust and Controllable Text to Speech&#34;</h1>
+			
+			<section itemprop="entry-text">
+				
+
+<p><br>
+Paper: <a href="../papers/fastspeech_2019.pdf">FastSpeech: Fast, Robust and Controllable Text to Speech</a>
+<!-- - ArXiv: [arXiv:1710.07654](https://arxiv.org/abs/1710.07654) --></p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+<li>Yi Ren* (Zhejiang University) <a href="mailto:rayeren613@gmail.com">rayeren613@gmail.com</a></li>
+<li>Yangjun Ruan* (Zhejiang University) <a href="mailto:ruanyj3107@zju.edu.cn">ruanyj3107@zju.edu.cn</a></li>
+<li>Xu Tan (Microsoft Research) <a href="mailto:xuta@microsoft.com">xuta@microsoft.com</a></li>
+<li>Tao Qin (Microsoft Research) <a href="mailto:taoqin@microsoft.com">taoqin@microsoft.com</a></li>
+<li>Sheng Zhao (Microsoft) <a href="mailto:Sheng.Zhao@microsoft.com">Sheng.Zhao@microsoft.com</a></li>
+<li>Zhou Zhao (Zhejiang University) <a href="mailto:zhaozhou@zju.edu.cn">zhaozhou@zju.edu.cn</a></li>
+<li>Tie-Yan Liu (Microsoft Research) <a href="mailto:tyliu@microsoft.com">tyliu@microsoft.com</a></li>
+</ul>
+
+<p><small>* Equal contribution.</small></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Neural network based end-to-end text to speech (TTS) has significantly improved the quality of synthesized speech. Prominent methods (e.g., Tacotron2) usually first generate mel-spectrogram from text, and then synthesize speech from mel-spectrogram using vocoder such as WaveNet. Compared with traditional concatenative and statistical parametric approaches, neural network based end-to-end models suffer from slow inference speed, and the synthesized speech is usually not robust (i.e., some words are skipped or repeated) and lack of controllability (voice speed or prosody control). In this work, we propose a novel feed-forward network based on Transformer to generate mel-spectrogram in parallel for TTS. Specifically, we extract attention alignments from an encoder-decoder based teacher model for phoneme duration prediction, which is used to expand the source phoneme sequence to match the length of target mel-sprectrogram sequence for parallel mel-sprectrogram generation. Experiments on the LJSpeech dataset show that our parallel model matches autoregressive models in terms of speech quality, reduces the ratio of skipped words and repeated words by 34\%, and can adjust voice speed smoothly. Most importantly, compared with autoregressive models, our model speeds up the mel-sprectrogram generation by 280x. Therefore, we call our model FastSpeech. We will release the code on Github.</p>
+
+<h2 id="audio-samples">Audio Samples</h2>
+
+<h3 id="audio-quality">Audio Quality</h3>
+
+<p><em>He is quite content to die</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">GT (waveglow)</th>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>When brought to trial he hardly realized his position</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">GT (waveglow)</th>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>I will quote an extract from the reverend gentleman&rsquo;s own journal.</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">GT (waveglow)</th>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>The felons&rsquo; side has a similar accommodation, and this mode of introducing the beverage is adopted because no publican as such</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">GT (waveglow)</th>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>He had prospered in early life, was a slop-seller on a large scale at Bury St. Edmunds, and a sugar-baker in the metropolis</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">GT (waveglow)</th>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<!-- 6. *Since the calamitous event," he went on, "that happened at Hertford, I have been a lost man."*
+
+    <table><thead>
+    <tr>
+    <th style="text-align: center">GT (waveglow)</th>
+    <th style="text-align: center">Transformer TTS (waveglow)</th>
+    <th style="text-align: center">FastSpeech (waveglow)</th>
+    </tr></thead><tbody>
+    <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
+    </tbody></table>
+
+7. *There were others less successful*
+
+    <table><thead>
+    <tr>
+    <th style="text-align: center">GT (waveglow)</th>
+    <th style="text-align: center">Transformer TTS (waveglow)</th>
+    <th style="text-align: center">FastSpeech (waveglow)</th>
+    </tr></thead><tbody>
+    <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
+    </tbody></table>
+
+8. *It would be far better to begin at the beginning*
+
+    <table><thead>
+    <tr>
+    <th style="text-align: center">GT (waveglow)</th>
+    <th style="text-align: center">Transformer TTS (waveglow)</th>
+    <th style="text-align: center">FastSpeech (waveglow)</th>
+    </tr></thead><tbody>
+    <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/8.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/8.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/8.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
+    </tbody></table>
+
+9. *The result of the recommendation of the committee of 1862 was the Prison Act of 1865*
+
+    <table><thead>
+    <tr>
+    <th style="text-align: center">GT (waveglow)</th>
+    <th style="text-align: center">Transformer TTS (waveglow)</th>
+    <th style="text-align: center">FastSpeech (waveglow)</th>
+    </tr></thead><tbody>
+    <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/9.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/9.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/9.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
+    </tbody></table>
+
+10. *The causes of this ascent are not clear*
+
+<table><thead>
+<tr>
+<th style="text-align: center">GT (waveglow)</th>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/gt_waveglow/10.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/at/10.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/10.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table> -->
+
+<h3 id="robustness-test">Robustness Test</h3>
+
+<p><em>The result of the recommendation of the committee of 1862 was the Prison Act of 1865,</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/at/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>In spite, however, of his praiseworthy efforts, printing had still one last degradation to undergo.</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/at/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>To deliver interfaces that are significantly better suited  to create and process RFC eight twenty one , RFC eight twenty two , RFC nine seventy seven , and MIME content .</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/at/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>Http0XX , Http1XX , Http2XX , Http3XX ,</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/at/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>You can call me directly at four two five seven zero three seven three four four or my cell four two five four four four seven four seven four or send me a meeting request with all the appropriate information .</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Transformer TTS (waveglow)</th>
+<th style="text-align: center">FastSpeech (waveglow)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/at/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<h3 id="length-control">Length Control</h3>
+
+<h4 id="voice-speed">Voice Speed</h4>
+
+<p><em>was executed on a gibbet in front of his victim&rsquo;s house.</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">0.50x</th>
+<th style="text-align: center">0.75x</th>
+<th style="text-align: center">1.00x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.5/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.75/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.0/1.wav" autoplay/>Your browser does not support the audio element.</audio></td></tr>
+</tbody></table>
+<table><thead>
+<tr>
+<th style="text-align: center">1.25x</th>
+<th style="text-align: center">1.50x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.25/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/1.wav" autoplay/>Your browser does not support the audio element.</audio></td></tr>
+</tbody></table>
+
+<p><em>For a while the preacher addresses himself to the congregation at large, who listen attentively</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">0.50x</th>
+<th style="text-align: center">0.75x</th>
+<th style="text-align: center">1.00x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.5/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.75/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.0/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+<table><thead>
+<tr>
+<th style="text-align: center">1.25x</th>
+<th style="text-align: center">1.50x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.25/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>he put them also to the sword.</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">0.50x</th>
+<th style="text-align: center">0.75x</th>
+<th style="text-align: center">1.00x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.5/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.75/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.0/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th style="text-align: center">1.25x</th>
+<th style="text-align: center">1.50x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.25/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>The nature of the protective assignment.</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">0.50x</th>
+<th style="text-align: center">0.75x</th>
+<th style="text-align: center">1.00x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.5/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.75/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.0/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th style="text-align: center">1.25x</th>
+<th style="text-align: center">1.50x</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.25/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<h4 id="breaking-between-words">Breaking between words</h4>
+
+<p><em>as yet <span style="color:red">|</span> no rules or regulations had been printed or prepared</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Origin</th>
+<th style="text-align: center">Add Breaks</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>that he appeared to feel deeply the force of the reverend gentleman&rsquo;s observations especially <span style="color:red">|</span> when the chaplain spoke of</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Origin</th>
+<th style="text-align: center">Add Breaks</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>after dinner <span style="color:red">|</span> he went into hiding for a day or two</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Origin</th>
+<th style="text-align: center">Add Breaks</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>the man bousfield however <span style="color:red">|</span> whose execution was so sadly bungled</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Origin</th>
+<th style="text-align: center">Add Breaks</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<p><em>here again probably it was partly the love of notoriety <span style="color:red">|</span> which was the incentive</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Origin</th>
+<th style="text-align: center">Add Breaks</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody></table>
+
+<h2 id="model-hyperparameters">Model Hyperparameters</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Transformer TTS</th>
+<th>Our Model</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Hidden Size</td>
+<td>384</td>
+<td>384</td>
+</tr>
+
+<tr>
+<td>Conv1D Kernel</td>
+<td>3</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>Conv1D Filter Size</td>
+<td>384</td>
+<td>384</td>
+</tr>
+
+<tr>
+<td>#Encoder Layer</td>
+<td>4</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>#Decoder Layers</td>
+<td>4</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>#FFT Block Dropout</td>
+<td>0.1</td>
+<td>0.1</td>
+</tr>
+
+<tr>
+<td>Total Number</td>
+<td>26.3M</td>
+<td>31.7M</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="code">Code</h2>
+
+<p>To be released&hellip;.</p>
+
+			</section>
+		</article>
+	</main>
+
+
+	
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-139981676-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         HTML: ["input/TeX","output/HTML-CSS"],
+         TeX: {
+                Macros: {
+                         bm: ["\\boldsymbol{#1}", 1],
+                         argmax: ["\\mathop{\\rm arg\\,max}\\limits"],
+                         argmin: ["\\mathop{\\rm arg\\,min}\\limits"]},
+                extensions: ["AMSmath.js","AMSsymbols.js"],
+                equationNumbers: { autoNumber: "AMS" } },
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX","output/HTML-CSS"],
+         tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true },
+         "HTML-CSS": { availableFonts: ["TeX"],
+                       linebreaks: { automatic: true } }
+     });
+ </script>
+
+ <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       }
+     });
+ </script>
+
+ <script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+
+
+
+
+</body>
+</html>
+
