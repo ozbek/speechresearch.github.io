@@ -37,7 +37,7 @@ Abstract Text to speech (TTS) and automatic speech recognition (ASR) are two dua
       <pubDate>Fri, 10 May 2019 15:30:00 +0901</pubDate>
       
       <guid>https://speechresearch.github.io/fastspeech/</guid>
-      <description>Paper: FastSpeech: Fast, Robust and Controllable Text to Speech Authors  Yi Ren* (Zhejiang University) rayeren613@gmail.com Yangjun Ruan* (Zhejiang University) ruanyj3107@zju.edu.cn Xu Tan (Microsoft Research) xuta@microsoft.com Tao Qin (Microsoft Research) taoqin@microsoft.com Sheng Zhao (Microsoft) Sheng.Zhao@microsoft.com Zhou Zhao (Zhejiang University) zhaozhou@zju.edu.cn Tie-Yan Liu (Microsoft Research) tyliu@microsoft.com  * Equal contribution.
+      <description>Paper: FastSpeech: Fast, Robust and Controllable Text to Speech Authors  Yi Ren* (Zhejiang University) rayeren@zju.edu.cn Yangjun Ruan* (Zhejiang University) ruanyj3107@zju.edu.cn Xu Tan (Microsoft Research) xuta@microsoft.com Tao Qin (Microsoft Research) taoqin@microsoft.com Sheng Zhao (Microsoft) Sheng.Zhao@microsoft.com Zhou Zhao (Zhejiang University) zhaozhou@zju.edu.cn Tie-Yan Liu (Microsoft Research) tyliu@microsoft.com  * Equal contribution.
 Abstract Neural network based end-to-end text to speech (TTS) has significantly improved the quality of synthesized speech. Prominent methods (e.</description>
     </item>
     
