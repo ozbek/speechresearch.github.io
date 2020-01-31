@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="generator" content="Hugo 0.55.5" />
+<meta name="generator" content="Hugo 0.62.2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <link rel="stylesheet" href="../css/normalize.css">
 <link rel="stylesheet" href="../css/skeleton.css">
 <link rel="stylesheet" href="../css/custom.css">
-<link rel="alternate" href="index.xml" type="application/rss+xml" title="Almost Unsupervised Text to Speech and Automatic Speech Recognition">
+<link rel="alternate" href="index.xml" type="application/rss+xml" title="SpeechResearch">
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-<title>Audio Sample from &#34;FastSpeech: Fast, Robust and Controllable Text to Speech&#34; - Almost Unsupervised Text to Speech and Automatic Speech Recognition</title>
+<title>Audio Sample from &#34;FastSpeech: Fast, Robust and Controllable Text to Speech&#34; - SpeechResearch</title>
 </head>
 <body>
 
@@ -30,17 +30,11 @@
             <h1 class="entry-title" itemprop="headline">Audio Sample from &#34;FastSpeech: Fast, Robust and Controllable Text to Speech&#34;</h1>
 			
 			<section itemprop="entry-text">
-				
-
-<p><br>
-<!-- Paper: <a href="../papers/fastspeech_2019.pdf">FastSpeech: Fast, Robust and Controllable Text to Speech</a> --></p>
-
+				<br>
+<!-- Paper: <a href="../papers/fastspeech_2019.pdf">FastSpeech: Fast, Robust and Controllable Text to Speech</a> -->
 <p>ArXiv: <a href="https://arxiv.org/abs/1905.09263">arXiv:1905.09263</a></p>
-
 <p>Reddit Discussions: <a href="https://www.reddit.com/r/MachineLearning/comments/brzwi5/r_fastspeech_fast_robust_and_controllable_text_to/">Click me</a></p>
-
 <h2 id="authors">Authors</h2>
-
 <ul>
 <li>Yi Ren* (Zhejiang University) <a href="mailto:rayeren@zju.edu.cn">rayeren@zju.edu.cn</a></li>
 <li>Yangjun Ruan* (Zhejiang University) <a href="mailto:ruanyj3107@zju.edu.cn">ruanyj3107@zju.edu.cn</a></li>
@@ -50,24 +44,15 @@
 <li>Zhou Zhao (Zhejiang University) <a href="mailto:zhaozhou@zju.edu.cn">zhaozhou@zju.edu.cn</a></li>
 <li>Tie-Yan Liu (Microsoft Research) <a href="mailto:tyliu@microsoft.com">tyliu@microsoft.com</a></li>
 </ul>
-
 <p><small>* Equal contribution.</small></p>
-
 <h2 id="abstract">Abstract</h2>
-
 <p>Neural network based end-to-end text to speech (TTS) has significantly improved the quality of synthesized speech. Prominent methods (e.g., Tacotron 2) usually first generate mel-spectrogram from text, and then synthesize speech from mel-spectrogram using vocoder such as WaveNet. Compared with traditional concatenative and statistical parametric approaches, neural network based end-to-end models suffer from slow inference speed, and the synthesized speech is usually not robust (i.e., some words are skipped or repeated) and lack of controllability (voice speed or prosody control). In this work, we propose a novel feed-forward network based on Transformer to generate mel-spectrogram in parallel for TTS. Specifically, we extract attention alignments from an encoder-decoder based teacher model for phoneme duration prediction, which is used by a length regulator to expand the source phoneme sequence to match the length of target mel-spectrogram sequence for parallel mel-spectrogram generation. Experiments on the LJSpeech dataset show that our parallel model matches autoregressive models in terms of speech quality, nearly eliminates the problem of word skipping and repeating in particularly hard cases, and can adjust voice speed smoothly. Most importantly, compared with autoregressive Transformer TTS, our model speeds up the mel-spectrogram generation by 270x and the end-to-end speech synthesis by 38x. Therefore, we call our model FastSpeech. We will release the code on Github once the paper is published.</p>
-
 <h2 id="audio-samples">Audio Samples</h2>
-
 <p>All of the audio samples use WaveGlow as vocoder.</p>
-
 <h3 id="audio-quality">Audio Quality</h3>
-
-<p><em>I will quote an extract from the reverend gentleman&rsquo;s own journal.</em></p>
-
+<p><em>I will quote an extract from the reverend gentleman's own journal.</em></p>
 <table><thead>
 <tr>
-
 <th style="text-align: center">GT(WaveGlow)</th>
 <th style="text-align: center">Transformer TTS</th>
 <th style="text-align: center">FastSpeech</th>
@@ -90,9 +75,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/merlin/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>He is quite content to die</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT(WaveGlow)</th>
@@ -105,7 +88,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT</th>
@@ -118,9 +100,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/merlin/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>The result of the recommendation of the committee of 1862 was the Prison Act of 1865</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT(WaveGlow)</th>
@@ -133,7 +113,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/9.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT</th>
@@ -146,9 +125,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/merlin/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>The felons&rsquo; side has a similar accommodation, and this mode of introducing the beverage is adopted because no publican as such</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT(WaveGlow)</th>
@@ -173,9 +150,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/merlin/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>He had prospered in early life, was a slop-seller on a large scale at Bury St. Edmunds, and a sugar-baker in the metropolis</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT(WaveGlow)</th>
@@ -188,7 +163,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <table><thead>
 <tr>
 <th style="text-align: center">GT</th>
@@ -201,7 +175,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/merlin/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <!-- *The causes of this ascent are not clear*
 
 <table><thead>
@@ -216,7 +189,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/10.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table> -->
-
 <!-- *When brought to trial he hardly realized his position*
 
 <table><thead>
@@ -231,7 +203,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table> -->
-
 <!-- *There were others less successful*
 
 <table><thead>
@@ -246,7 +217,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table> -->
-
 <!-- *The causes of this ascent are not clear*
 
 <table><thead>
@@ -261,7 +231,6 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/10.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table> -->
-
 <!--
 8. *It would be far better to begin at the beginning*
 
@@ -293,9 +262,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/audio/na/10.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table> -->
-
 <h3 id="robustness-test">Robustness Test</h3>
-
 <!-- *The result of the recommendation of the committee of 1862 was the Prison Act of 1865.*
 
 <table><thead>
@@ -308,9 +275,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table> -->
-
 <p><em>You can call me directly at four two five seven zero three seven three four four or my cell four two five four four four seven four seven four or send me a meeting request with all the appropriate information.</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Transformer TTS</th>
@@ -321,9 +286,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>To deliver interfaces that are significantly better suited  to create and process RFC eight twenty one , RFC eight twenty two , RFC nine seventy seven , and MIME content.</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Transformer TTS</th>
@@ -334,9 +297,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>Http0XX , Http1XX , Http2XX , Http3XX</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Transformer TTS</th>
@@ -347,13 +308,9 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/robustness/na/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <h3 id="length-control">Length Control</h3>
-
 <h4 id="voice-speed">Voice Speed</h4>
-
-<p><em>was executed on a gibbet in front of his victim&rsquo;s house.</em></p>
-
+<p><em>was executed on a gibbet in front of his victim's house.</em></p>
 <table><thead>
 <tr>
 <th style="text-align: center">0.50x</th>
@@ -374,9 +331,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.25/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/1.wav" autoplay/>Your browser does not support the audio element.</audio></td></tr>
 </tbody></table>
-
 <p><em>For a while the preacher addresses himself to the congregation at large, who listen attentively</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">0.50x</th>
@@ -399,9 +354,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>he put them also to the sword.</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">0.50x</th>
@@ -412,10 +365,8 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.5/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.75/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.0/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-
 </tr>
 </tbody></table>
-
 <table><thead>
 <tr>
 <th style="text-align: center">1.25x</th>
@@ -426,9 +377,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>The nature of the protective assignment.</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">0.50x</th>
@@ -439,10 +388,8 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.5/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/0.75/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.0/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-
 </tr>
 </tbody></table>
-
 <table><thead>
 <tr>
 <th style="text-align: center">1.25x</th>
@@ -453,11 +400,8 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/speed/1.5/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <h4 id="breaking-between-words">Breaking between words</h4>
-
 <p><em>as yet <span style="color:red">|</span> no rules or regulations had been printed or prepared</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Origin</th>
@@ -468,9 +412,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
-<p><em>that he appeared to feel deeply the force of the reverend gentleman&rsquo;s observations especially <span style="color:red">|</span> when the chaplain spoke of</em></p>
-
+<p><em>that he appeared to feel deeply the force of the reverend gentleman's observations especially <span style="color:red">|</span> when the chaplain spoke of</em></p>
 <table><thead>
 <tr>
 <th style="text-align: center">Origin</th>
@@ -481,9 +423,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>after dinner <span style="color:red">|</span> he went into hiding for a day or two</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Origin</th>
@@ -494,9 +434,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>the man bousfield however <span style="color:red">|</span> whose execution was so sadly bungled</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Origin</th>
@@ -507,9 +445,7 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <p><em>here again <span style="color:red">|</span> probably it was partly the love of notoriety which was the incentive</em></p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Origin</th>
@@ -520,13 +456,9 @@
 <td style="text-align: center"><audio controls="controls" ><source src="../audio/fastspeech/break/na_modified/2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-
 <h2 id="inference-speedup">Inference Speedup</h2>
-
 <p>The evaluation experiments are conducted on the server with 12 Intel Xeon CPU, 256GB memory and 1 NVIDIA V100 GPU.</p>
-
 <p>Compared with autoregressive Transformer TTS, our model speeds up the mel-spectrogram generation by 270x and the end-to-end speech synthesis by 38x.</p>
-
 <table><thead>
 <tr>
 <th style="text-align: center">Inference Time vs. Mel Length (FastSpeech)</th>
@@ -541,9 +473,7 @@
 </td>
 </tr>
 </tbody></table>
-
 <p>We also visualize the relationship between the inference latency and the length of the predicted mel-spectrogram sequence in the test set. It can be found from Figure that the inference latency barely increases with the length of the predicted mel-spectrogram for FastSpeech, while increases largely in Transformer TTS. This indicates that the inference speed of our method is not sensitive to the length of generated audio due to parallel generation.</p>
-
 <!-- ## Model Hyperparameters
 
 \ | Transformer TTS   |  Our Model
@@ -557,13 +487,9 @@
  Total Number  | 26.3M  |  24.2M 
 
  -->
-
 <h2 id="code">Code</h2>
-
 <p>Code will be released after the paper is accepted by the conference.</p>
-
 <h2 id="our-related-works">Our Related Works</h2>
-
 <p><a href="/unsuper/">Almost Unsupervised Text to Speech and Automatic Speech Recognition</a></p>
 
 			</section>
