@@ -6,10 +6,21 @@
     <description>Recent content in Speech synthesis on SpeechResearch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 May 2019 15:30:00 +0901</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2020 15:30:00 +0901</lastBuildDate>
     
 	<atom:link href="https://speechresearch.github.io/categories/speech-synthesis/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Audio Sample from &#34;LRSpeech: Extremely Low-Resource Speech Synthesis and Recognition&#34;</title>
+      <link>https://speechresearch.github.io/lrspeech/</link>
+      <pubDate>Sun, 02 Feb 2020 15:30:00 +0901</pubDate>
+      
+      <guid>https://speechresearch.github.io/lrspeech/</guid>
+      <description>FastSpeech: Fast, Robust and Controllable Text to Speech --
+Authors  Jin Xu* (Tsinghua University) jxu3425@gmail.com Xu Tan (Microsoft Research) xuta@microsoft.com Tao Qin (Microsoft Research) taoqin@microsoft.com Sheng Zhao (Microsoft STC Asia) Sheng.Zhao@microsoft.com Tie-Yan Liu (Microsoft Research) tyliu@microsoft.com  * Equal contribution.
+Abstract Neural network based end-to-end text to speech (TTS) has significantly improved the quality of synthesized speech. Prominent methods (e.g., Tacotron 2) usually first generate mel-spectrogram from text, and then synthesize speech from mel-spectrogram using vocoder such as WaveNet.</description>
+    </item>
     
     <item>
       <title>Audio Sample from &#34;Almost Unsupervised Text to Speech and Automatic Speech Recognition&#34;</title>
@@ -27,19 +38,6 @@ Abstract Text to speech (TTS) and automatic speech recognition (ASR) are two dua
       <pubDate>Fri, 10 May 2019 15:30:00 +0901</pubDate>
       
       <guid>https://speechresearch.github.io/fastspeech/</guid>
-      <description>FastSpeech: Fast, Robust and Controllable Text to Speech --
-ArXiv: arXiv:1905.09263
-Reddit Discussions: Click me
-Authors  Yi Ren* (Zhejiang University) rayeren@zju.edu.cn Yangjun Ruan* (Zhejiang University) ruanyj3107@zju.edu.cn Xu Tan (Microsoft Research) xuta@microsoft.com Tao Qin (Microsoft Research) taoqin@microsoft.com Sheng Zhao (Microsoft STC Asia) Sheng.Zhao@microsoft.com Zhou Zhao (Zhejiang University) zhaozhou@zju.edu.cn Tie-Yan Liu (Microsoft Research) tyliu@microsoft.com  * Equal contribution.
-Abstract Neural network based end-to-end text to speech (TTS) has significantly improved the quality of synthesized speech.</description>
-    </item>
-    
-    <item>
-      <title>Audio Sample from &#34;LRSpeech: Extremely Low-Resource Speech Synthesis and Recognition&#34;</title>
-      <link>https://speechresearch.github.io/lrspeech/</link>
-      <pubDate>Fri, 10 May 2019 15:30:00 +0901</pubDate>
-      
-      <guid>https://speechresearch.github.io/lrspeech/</guid>
       <description>FastSpeech: Fast, Robust and Controllable Text to Speech --
 ArXiv: arXiv:1905.09263
 Reddit Discussions: Click me
