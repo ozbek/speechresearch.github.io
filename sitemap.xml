@@ -9,14 +9,14 @@
   </url>
   
   <url>
-    <loc>https://speechresearch.github.io/lrspeech/</loc>
-    <lastmod>2020-02-02T15:30:00+09:01</lastmod>
-  </url>
-  
-  <url>
     <loc>https://speechresearch.github.io/categories/</loc>
     <lastmod>2020-02-02T15:30:00+09:01</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://speechresearch.github.io/lrspeech/</loc>
+    <lastmod>2020-02-02T15:30:00+09:01</lastmod>
   </url>
   
   <url>
